@@ -1,0 +1,23 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyMauiApp.Views.MainPage">
+
+    <StackLayout >
+        <StackLayout Orientation="Horizontal" class="entryStackMain" >
+            <Entry x:Name="txtName" Placeholder="Imię i nazwisko" HorizontalOptions="CenterAndExpand" ClassId="entryMain"/>
+            <Entry x:Name="txtClass" Placeholder="Klasa" HorizontalOptions="Fill"/>
+            <Entry x:Name="txtRollNumber" Placeholder="Numer w dzienniku" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+            <Picker x:Name="classPicker" Title="Wybierz klase" HorizontalOptions="CenterAndExpand"/>
+        <FlexLayout Direction="Row" JustifyContent="Center" class="buttonsMain ">
+            <Button x:Name="btnSave" Text="Zapisz" Clicked="OnSaveClicked"/>
+            <Button x:Name="btnLoad" Text="Odśwież listę" Clicked="OnLoadClicked"/>
+            <Button x:Name="btnRnd" Text="Losuj osobę" Clicked="OnPickRandomClicked" />
+            <Button x:Name="btnEdit" Text="Edytuj liste" Clicked="OnEditStudentsClicked"/>
+        </FlexLayout>
+    </StackLayout>
+
+</ContentPage>

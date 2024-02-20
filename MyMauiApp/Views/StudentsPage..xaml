@@ -1,0 +1,32 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMauiApp.Views.StudentsPage"
+             Title="Lista uczniow">
+
+    <StackLayout>
+
+        <Picker x:Name="classPicker" Title="Wybierz klase" SelectedIndexChanged="OnClassPickerSelectedIndexChanged"/>
+        <ListView x:Name="studentsListView" ItemSelected="OnItemSelected" HorizontalOptions="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" class="containerStudents" HorizontalOptions="Center" >
+                            <Switch IsToggled="{Binding IsPresent, Mode=TwoWay}" HorizontalOptions="Center"/>
+                            <StackLayout Orientation="Vertical" class="containerButtons" HorizontalOptions="CenterAndExpand">
+                                <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text= "{Binding Class}" FontSize="Small"/>
+                                    <Label Text=" - "/>
+                                    <Label Text="{Binding RollNumber}" FontAttributes="Italic"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <Button x:Name="btnDelete" Text="Delete" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

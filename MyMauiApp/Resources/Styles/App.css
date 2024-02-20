@@ -1,0 +1,58 @@
+^contentpage {
+    -maui-shell-background: red;
+}
+
+.entryStackMain {
+    justify-content: center;
+    margin-top: 25;
+}
+
+#classPicker {
+    margin: 25;
+}
+
+#txtName, #txtClass, #txtRollNumber {
+    height: 120;
+    width: 250;
+}
+
+.buttonsMain {
+    color: black;
+    width: 500;
+}
+
+#studentsListView {
+    justify-content: center;
+}
+
+.containerStudents > .containerButtons > #btnSave,
+.containerStudents > .containerButtons > #btnLoad,
+.containerStudents > .containerButtons > #btnRnd,
+.containerStudents > .containerButtons > #btnEdit {
+    margin-right: 5;
+}
+
+#btnSave {
+    color: forestgreen;
+}
+
+#btnSave2 {
+    margin-top: 10;
+    width: 125;
+    color: forestgreen;
+}
+
+#btnDelete {
+    color: red;
+    height: 15;
+    width: 100;
+    margin-left: 10;
+}
+
+.listViewItem {
+    height: 70;
+}
+
+.containerButtons{
+    margin:5 ;
+}
